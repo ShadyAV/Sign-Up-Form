@@ -20,23 +20,27 @@
                 <h1>Greetings!</h1>
                 <h2>You can create account right here or log in</h2>
                 <form action="">
-                    <div id="formWrapper">
+                    <div class="formRow">
                         <div class="input">
                             <label for="firstName">First Name:</label>
-                            <input type="text" name="firstName" id="firstName">
+                            <input type="text" name="firstName" id="firstName" placeholder="John">
                         </div>
                         <div class="input">
                             <label for="secondName">Second Name:</label>
-                            <input type="text" name="secondName" id="secondName">
+                            <input type="text" name="secondName" id="secondName" placeholder="Smith">
                         </div>
+                    </div>
+                    <div class="formRow">
                         <div class="input">
                             <label for="userEmail">Email:</label>
-                            <input type="email" name="userEmail" id="userEmail">
+                            <input type="email" name="userEmail" id="userEmail" placeholder="jsmith@gmail.com">
                         </div>
                         <div class="input">
                             <label for="phoneNumber">Phone Number:</label>
                             <input type="tel" name="phoneNumber" id="phoneNumber">
                         </div>
+                    </div>
+                    <div class="formRow">
                         <div class="input">
                             <label for="userPassword">Password:</label>
                             <input type="password" name="userPassword" id="userPassword">
@@ -45,8 +49,8 @@
                             <label for="confirmPassword">Confirm Password:</label>
                             <input type="password" name="confirmPassword" id="confirmPassword">
                         </div>
-                        <button type="submit">Create Account</button>
                     </div>
+                    <button type="submit">Create Account</button>
                 </form>
                 <p>Already have an account? Log in</p>
             </div>

@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Slabo+27px&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Display&display=swap');
+
 :root {
     --purple: rgb(175, 80, 175);
 }
@@ -26,28 +30,63 @@
 
 #backImg {
     height: 900px;
-    border-top-left-radius: 16px;
-    border-bottom-left-radius: 16px;
+    border-radius: 16px;
 }
 
 #rightSide {
     display: flex;
     flex-direction: column;
-    padding: 0px 60px;
+    padding: 0px 65px;
+    width: 565px;
 }
 
 #pinWheelWrapper {
     display: flex;
     justify-content: end;
+    padding-top: 36px;
 }
 
-#formWrapper {
+h1 {
+    font-family: 'Bebas Neue', cursive;
+    margin-top: 36px;
+}
+
+h2 {
+    font-family: 'Slabo 27px', serif;
+    margin-bottom: 32px;
+}
+
+.formRow {
     display: flex;
-    flex-wrap: wrap;
-    width: 350px;
+    justify-content: space-between;
 }
 
 .input {
+    font-family: 'Noto Sans Display', sans-serif;
     display: flex;
     flex-direction: column;
+    margin: 20px 0px;
+}
+
+.input label {
+    text-transform: uppercase;
+}
+
+.input input {
+    height: 36px;
+    width: 200px;
+    border-radius: 3px;
+    border: 2px solid var(--purple);
+}
+
+button {
+    margin: 32px 0px;
+    width: 164px;
+    height: 56px;
+    font-size: 18px;
+}
+
+button,
+p {
+    font-family: 'Noto Sans Display', sans-serif;
 }
