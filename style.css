@@ -1,15 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Slabo+27px&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alatsi&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 :root {
     --purple: rgb(175, 80, 175);
+    --lightgrey: #e6e6e6;
 }
 
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    font-family: 'Bebas Neue', cursive;
 }
 
 #container {
@@ -18,7 +20,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #e6e6e6;
+    background-color: var(--lightgrey)
 }
 
 #wrapper {
@@ -26,34 +28,40 @@
     background-color: #fff;
     border-right: 16px solid var(--purple);
     border-radius: 16px;
+    box-shadow: 0 0 6px #000;
+    height: 90%;
 }
 
 #backImg {
-    height: 900px;
     border-radius: 16px;
+    height: 100%;
 }
 
 #rightSide {
     display: flex;
     flex-direction: column;
-    padding: 0px 65px;
-    width: 565px;
+    padding: 0px 50px;
+    width: 600px;
 }
 
 #pinWheelWrapper {
     display: flex;
     justify-content: end;
-    padding-top: 36px;
+    padding-top: 20px;
 }
 
 h1 {
-    font-family: 'Bebas Neue', cursive;
+    font-size: 50px;
     margin-top: 36px;
+    text-shadow: 3px 3px rgb(201, 201, 201);
+    letter-spacing: 1px;
 }
 
 h2 {
-    font-family: 'Slabo 27px', serif;
     margin-bottom: 32px;
+    font-weight: normal;
+    font-size: 22px;
+    font-family: 'Roboto', sans-serif;
 }
 
 .formRow {
@@ -62,31 +70,97 @@ h2 {
 }
 
 .input {
-    font-family: 'Noto Sans Display', sans-serif;
     display: flex;
     flex-direction: column;
-    margin: 20px 0px;
+    margin: 18px 0px;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
 }
 
 .input label {
-    text-transform: uppercase;
+    font-size: 26px;
 }
 
 .input input {
     height: 36px;
-    width: 200px;
+    width: 230px;
     border-radius: 3px;
-    border: 2px solid var(--purple);
+    border-color: #000;
+    font-family: inherit;
+    font-size: 20px;
+    line-height: 1.5;
+    padding: 1px 2px;
+
+    outline: none;
+    border: 2px solid #000;
+}
+
+.input input:focus {
+    border-color: var(--purple);
 }
 
 button {
     margin: 32px 0px;
-    width: 164px;
-    height: 56px;
-    font-size: 18px;
+    width: 170px;
+    height: 50px;
+    font-size: 26px;
+    border-radius: 6px;
+    border: none;
+    background-color: var(--purple);
+    color: #fff;
 }
 
-button,
+button:hover {
+    opacity: 80%;
+    cursor: pointer;
+}
+
 p {
-    font-family: 'Noto Sans Display', sans-serif;
+    font-size: 22px;
+    font-family: 'Roboto', sans-serif;
+}
+
+a {
+    font-family: inherit;
+    color: var(--purple);
+    text-decoration-line: none;
+}
+
+a:hover {
+    opacity: 80%;
+    background-color: var(--purple);
+    background-color: rgba(175, 80, 175, 0.085);
+    border-radius: 6px;
+}
+
+@media (max-width: 1150px) {
+    #backImg {
+        display: none;
+    }
+}
+
+@media (max-width: 680px) {
+    #rightSide {
+        width: 600px;
+        flex-wrap: wrap;
+    }
+
+    .formRow {
+        flex-direction: column;
+    }
+
+    #wrapper {
+        width: 100%;
+    }
+
+    .input input {
+        width: 100%;
+        min-width: 200px;
+    }
+
+    h1,
+    h2,
+    #pinWheelWrapper {
+        display: none;
+    }
 }
