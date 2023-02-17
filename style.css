@@ -86,8 +86,7 @@ h2 {
 .input input {
     height: 36px;
     width: 230px;
-    border-radius: 3px;
-    border-color: #000;
+    border-radius: 6px;
     font-family: inherit;
     font-size: 20px;
     line-height: 1.5;
@@ -133,6 +132,23 @@ a:hover {
     background-color: var(--purple);
     background-color: rgba(175, 80, 175, 0.085);
     border-radius: 6px;
+}
+
+.errorImg {
+    display: none;
+    background-image: url(Error.png);
+    background-repeat: no-repeat;
+    width: 16px;
+    height: 16px;
+}
+
+.errorWrapper {
+    display: flex;
+    color: rgb(184, 53, 53);
+}
+
+input.error {
+    border-color: red;
 }
 
 @media (max-width: 1150px) {
